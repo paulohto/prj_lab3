@@ -1,0 +1,27 @@
+{
+  "name": "prj_lab3",
+  "version": "1.0.0",
+  "description": "meus pacotes de scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scripts",
+    "node"
+  ],
+  "author": "paulo oliveira",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "firebase": "^8.6.0-2021411163636",
+    "firebase-admin": "^10.0.0",
+    "Require": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.16.3",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
+  }
+}
