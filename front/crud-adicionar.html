@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="style-crud.css">
+    <title>CRUD</title>
+</head>
+
+<body>   
+<div class="wrapper-crud">
+    <div class="blc-1"> <!-- 1 -->
+        <form>
+        <!-- ADICIONAR CATEGORIA -->       
+            <h3 class="subtitle">Nova Categoria:</h3>
+
+        <div class="cel-form" style="margin-top: 10px;">
+            <label>adicionar categoria:</label>
+            <input id="adctg-s" type="radio" name="adctg" value="SIM" style="vertical-align:middle; margin: 0px;">
+            <label for="adctg-s">sim</label>
+            
+            <input id="adctg-n" type="radio" name="adctg"  value="NÃO" checked style="vertical-align: middle; margin: 0px;">
+            <label for="adctg-n">não</label>
+        </div>
+
+        <div class="cel-form">
+            <label>nova categoria:</label>
+            <input id="nova-ctg" type="text" placeholder="" size="30%">
+        </div>
+
+            <button class="btnCtg" id="btnCtg" type="button" onclick="">criar</button>
+
+        </form>
+    </div>
+
+    <div></div>
+<hr>
+    <div class="blc-2"> <!-- 2 -->
+        <form>
+        <!-- ADICIONAR SUB CATEGORIA -->       
+            <h3 class="subtitle">Nova Subcategoria:</h3>
+
+        <div class="cel-form" style="margin-top: 10px;">
+            <label>adicionar subcategoria:</label>
+            <input id="adsubctg-s" type="radio" name="adsubctg" value="SIM" style="vertical-align:middle; margin: 0px;">
+            <label for="adsubctg-s">sim</label>
+            
+            <input id="adsubctg-n" type="radio" name="adsubctg"  value="NÃO" checked style="vertical-align: middle; margin: 0px;">
+            <label for="adsubctg-n">não</label>
+        </div>
+
+        <!-- selecionar categoria para criar subcategoria --> 
+        <div class="cel-form">
+            <label>selecione a categoria:</label>
+            <input list="ctg" name="ctg" size="30%">
+                <datalist id="ctg" >
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                </datalist>
+        </div>
+
+        <div class="cel-form">
+            <label>nova subcategoria:</label>
+            <input id="nova-sub-ctg" type="text" placeholder="" size="30%">
+        </div>
+            <button class="btnSubCtg" id="btnSubCtg" type="button" onclick="">criar</button>
+        </form>
+    </div>
+
+    <div> </div>
+<hr>
+    <div class="blc-3"> <!-- 3 -->
+        <form>
+            <!-- ADICIONAR ITENS -->
+            <h3 class="subtitle">Novo Produto:</h3>
+
+        <div class="cel-form">
+            <label>ean:</label><br>
+            <input id="ean" type="number" placeholder="" size="30%">
+        </div>
+
+        <div class="cel-form">
+            <label>categoria:</label>
+            <input list="ctg" name="ctg" size="30%">
+                <datalist id="ctg" >
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                </datalist>
+        </div>
+
+        <div class="cel-form">
+            <label>subcategoria:</label>
+            <input list="sub-ctg" name="sub-ctg" placeholder="" size="30%">
+                <datalist id="sub-ctg" >
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                </datalist>
+        </div>
+
+        <div class="cel-form">
+            <label>marca:</label>
+            <input list="marca" name="marca" placeholder="" size="30%">
+                <datalist id="marca" >
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                </datalist>
+        </div>
+
+        <div class="cel-form">
+            <label>embalagem / cx:</label>
+            <input id="embalagem" type="number" placeholder="" width="500px" size="400px" > 
+        </div>
+
+        <div class="cel-form">
+            <label>preço revenda:</label>
+            <input id="preco" type="number" placeholder="" >
+        </div>
+
+        <div class="cel-form">
+            <label>descrição:</label><br>
+            <input id="desc-cli" type="text" placeholder="" size="70%">
+        </div>
+        
+        <div class="cel-form">
+            <!-- <label>imagem prod.:</label> --><br>
+            <input id="imagem-prod" type="file" placeholder="" size="10%" style="margin-left: 250px;" >
+        </div>
+        
+            <button class="btnAddItem" id="btnAddItem" type="button" onclick="">adicionar</button>
+
+        </form>
+    </div>
+
+</div>
+    
+
+</body>
+</html>

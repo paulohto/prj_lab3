@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" media="screen" href="style.css"> -->
+    <title>LY - Inventory System</title>
+    <link rel="shortcut icon" href="/img/ico.png">
+    <link rel="stylesheet" media="screen" href="./style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js" type="module"></script>
+    
+</head>
+
+<body>
+
+    <!-- BARRA TOPO -->
+    <header>
+        <p> : : Lorem Yps v1.0 - Inventory System</p>    
+    </header>
+    <div class="line_top"></div>   
+    
+    <!-- COTEÚDO -->
+    <div class="wrapper">
+        <div></div>
+
+        <div class="side_l"><!-- LADO DIREIRO: LOGO -->
+            <div>
+                <img src="img/log-4.png" style="width: 300px; padding-top: 0px; margin: auto">
+            </div>
+            <div class="box_logo">
+                <h1 class="logo_log">Lorem Yps</h1>
+                <p class="p_logo_log">Sistema de estoque para Distribuidores de Alimentos</p>
+            </div>
+        </div>
+
+        <div class="side_c"></div>
+        <div></div>
+
+        <div class="side_r"><!-- LADO ESQUERDO: ÁREA DE LOGIN -->
+            <form>
+                <div class="box-form-log">
+                    <h2>Sign in</h2>
+                    <label>User name:</label>
+                    <input id="user_name" type="email" placeholder="e-mail" size="40%">
+                </br> </br>
+                    <label>Password:</label>
+                    <input id="password" type="password" placeholder="senha" size="40%">
+                    <br>
+
+                </div>
+            </form>
+            <button class="btnEntrar" id="btnAcessar" type="button" onclick="">entrar</button>
+
+        </div>
+
+        <div></div>
+
+    </div>   
+    <script type="module" src="/autenticacao.js"></script>
+
+</body>
+</html>
