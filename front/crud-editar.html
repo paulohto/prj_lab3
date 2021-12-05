@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="style-crud.css">
+    <script src="crud_script.js"></script>
+    <title>CRUD</title>
+</head>
+
+<body>   
+<div class="wrapper-crud">
+    <div class="blc-1"> <!-- 1 -->
+        <form>
+        <!-- EDITAR CATEGORIA -->       
+        <h3 class="subtitle">Editar Categoria:</h3>
+
+        <div class="cel-form-edit">
+            <label>selecione a categoria:</label>
+            <select id="ctg" name="ctg">
+                    <option value="0">-- selecione --</option>
+                    <option value="1">-- 1 --</option>
+                    <option value="2">-- 2 --</option>
+                    <option value="3">-- 3 --</option>
+                    <option value="4">-- 4 --</option>
+                    <option value="5">-- 5 --</option>
+                </select>
+        </div>
+
+        <div class="cel-form-edit" style="margin-top: 0px; ">
+            <label>ação:</label></br>
+            <input id="edtctg" type="radio" name="edt_del_ctg" value="editar" style="vertical-align:middle; margin: 10px; margin-left: -1px;">
+            <label for="edtctg" style="margin-left: -5px;">editar</label>
+            
+            <input id="delctg" type="radio" name="edt_del_ctg"  value="deletar" style="vertical-align: middle; margin: 10px; margin-left: -1px">
+            <label for="delctg" style="margin-left: -5px;">deletar</label>
+        </div>
+
+        <div class="cel-form-edit" style="width: 20px;" >
+            <button class="btnBuscar" id="btnBuscar" type="button" onclick="buscarCtg()">buscar</button>
+        </div>
+
+        <!--LOCAL ONDE APARECERÁ ITEM DA BUSCA -->
+        <div class="cel-form-edit">
+            <label> </label></br>
+               <input class="" id="edit-ctg" name="edit-ctg" value="" type="text" placeholder="" size="30%"> 
+        </div>
+
+        <!-- BOTÃO BUSCAR CATG -->
+            <button class="btnEdItem" id="btnCtg" type="button" onclick="actionCtg()">salvar</button>
+
+        </form>
+        <!-- INFORMAÇÃO DE ERRO -->
+            <p class="infoErro" id="infoEditCat">  </p>
+
+    </div>
+
+    <div></div>
+<hr>
+    <div class="blc-2"> <!-- 2 -->
+        <form>
+        <!-- EDITAR SUB CATEGORIA -->       
+            <h3 class="subtitle">Editar Subcategoria:</h3>
+
+            <div class="cel-form-edit-subct">
+                <label>selecione a categoria:</label>
+                <select id="ctg_busca_insubctg" name="ctg_busca_insubctg" style="width: 195px;">
+                    <option value="0">-- selecione --</option>
+                    <option value="1">-- 1 --</option>
+                    <option value="2">-- 2 --</option>
+                    <option value="3">-- 3 --</option>
+                    <option value="4">-- 4 --</option>
+                    <option value="5">-- 5 --</option>
+                </select>
+            </div>
+
+            <div class="cel-form-edit-subct">
+                <label>selecione a subcategoria:</label>
+                 <select id="sub_ctg" name="sub_ctg" style="width: 195px;">
+                    <option value="0" >-- selecione --</option>
+                    <option value="1">-- 1 --</option>
+                    <option value="2">-- 2 --</option>
+                    <option value="3">-- 3 --</option>
+                    <option value="4">-- 4 --</option>
+                    <option value="5">-- 5 --</option>
+                </select>
+            </div>
+    
+            <div class="cel-form-edit-subct" style="margin-top: 0px; ">
+                <label>ação:</label></br>
+                <input id="edtsubctg" type="radio" name="edt_del_subctg" value="editar" style="vertical-align:middle; margin: 10px; margin-left: -1px;">
+                <label for="edtsubctg" style="margin-left: -5px;">editar</label>
+                
+                <input id="deltsubctg" type="radio" name="edt_del_subctg"  value="deletar" style="vertical-align: middle; margin: 10px; margin-left: -1px">
+                <label for="deltsubctg" style="margin-left: -5px;">deletar</label>
+            </div>
+    
+            <div class="cel-form-edit-subct" style="width: 40px;" >
+                <button class="btnBuscar" id="btnBuscarSubCtg" type="button" onclick="buscarSubCtg()">buscar</button>
+            </div>
+                    
+            <div style="width: 0px;">
+            <!--LOCAL ONDE APARECERÁ ITEM DA BUSCA -->
+                <div class="cel-form-edit-subct" >
+                    <label> </label></br>
+                    <input id="edit-sub-ctg" name="edit-sub-ctg" type="text" value="" placeholder="" size="23%">
+                </div>
+
+            </div>
+                
+            <button class="btnEdItem" id="btnSubCtg" type="button" onclick="actionSubCtg()">salvar</button>
+        </form>
+        
+        <!-- INFORMAÇÃO DE ERRO -->
+        <p class="infoErro" id="infoEditSubCat">  </p>
+
+    </div>
+
+    <div> </div>
+<hr>
+    <div class="blc-3"> <!-- 3 -->
+        <form>
+            <!-- EDITAR ITENS -->
+            <h3 class="subtitle">Editar Produto:</h3>
+        
+        <div class="cel-form-edit">
+                <label>busca por ean:</label><br>
+                <input id="busca_ean" type="number" placeholder="" size="30%">
+        </div>
+
+        <div class="cel-form-edit" style="margin-top: 0px; ">
+                <label>ação:</label></br>
+                <input id="edtitem" type="radio" name="edt_del_item" value="editar" style="vertical-align:middle; margin: 10px; margin-left: -1px;">
+                <label for="edtitem" style="margin-left: -5px;">editar</label>
+                
+                <input id="delitem" type="radio" name="edt_del_item"  value="deletar" style="vertical-align: middle; margin: 10px; margin-left: -1px">
+                <label for="delitem" style="margin-left: -5px;">deletar</label>
+        </div>
+    
+        <div class="cel-form-edit" style="width: 20px;" >
+                <button class="btnBuscar" id="btnBuscarItem" type="button" onclick="buscarItem()">buscar</button>
+        </div>
+
+        <!-- INFORMAÇÃO DE ERRO -->
+        <p class="infoErro" id="infoEditItem">  </p>
+
+        </form>
+    </div>
+
+    <!--ITEN BUSCADO -->
+    <div class="blc-4"> <!-- 4 --> 
+        <form>
+        <div class="cel-form-edit">
+            <label>ean:</label><br>
+            <input id="ean" name="ean" type="text" placeholder="" size="30%">
+        </div>
+
+        <div class="cel-form-edit">
+            <label>categoria:</label>
+            <input id="ctginitem" type="text" placeholder="" size="30%">
+
+        </div>
+
+        <div class="cel-form-edit">
+            <label>subcategoria:</label>
+            <input id="subctg" type="text" placeholder="" size="30%">
+        </div>
+
+        <div class="cel-form-edit">
+            <label>marca:</label>
+            <input id="marca" type="text" placeholder="" size="30%">
+        </div>
+
+        <div class="cel-form-edit">
+            <label>embalagem / cx:</label>
+            <input id="embalagem" type="number" placeholder="" width="500px" size="400px" > 
+        </div>
+
+        <div class="cel-form-edit">
+            <label>preço revenda:</label>
+            <input id="preco" type="number" placeholder="" >
+        </div>
+
+        <div class="cel-form-edit">
+            <label>descrição:</label>
+            <input id="desc-cli" type="text" placeholder="" size="60%">
+        </div>
+        
+        <div class="cel-form-edit" style="margin-left: 200px;">
+            <label>imagem do produto:</label>
+            <input id="imagem-prod" type="file" placeholder="" size="10%">
+        </div>
+
+            <button class="btnEdItem" id="btnEdItem" type="button" onclick="">salvar </button>
+        </form>
+    </div>
+
+</div>
+    
+
+</body>
+</html>
